@@ -21,7 +21,15 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>My name is Ivan.</p>
+        <p>
+          My name is{' '}
+          <a
+            href="https://github.com/ivanzusko"
+            target="_blank"
+            rel="noopener noreferrer">
+            Ivan.
+          </a>
+        </p>
         <p>And I am frontend engineer.</p>
         <p>
           (This is a sample website built on{' '}
