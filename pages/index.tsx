@@ -5,14 +5,31 @@ import Date from '../components/Date';
 import Layout, { siteTitle } from '../components/Layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
-export default function Home({ allPostsData }) {
+
+export default function Home({
+  allPostsData,
+}: {
+  allPostsData: {
+    date: string;
+    title: string;
+    id: string;
+  }[];
+}) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>My name is Ivan.</p>
+        <p>
+          My name is{' '}
+          <a
+            href="https://github.com/ivanzusko"
+            target="_blank"
+            rel="noopener noreferrer">
+            Ivan.
+          </a>
+        </p>
         <p>And I am frontend engineer.</p>
         <p>
           (This is a sample website built on{' '}
